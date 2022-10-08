@@ -1,0 +1,366 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
+
+body {
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+.content-card {
+    display: flex;
+    align-items: center;
+}
+
+.content-left { 
+    display: flex;
+    align-items: center;
+    width: 30vw;
+    height: 100vh;
+    background-image: url(images/bg-main-desktop.png);
+    background-repeat: no-repeat;
+}
+
+#front-card {
+    position: relative;
+}
+
+#back-card {
+    position: relative;
+}
+
+#front-card img,
+#back-card img {
+    width: 350px;
+    height: 200px;
+}
+
+#front-card img {
+    display: flex;
+    position: absolute;
+    margin-left: 160px;
+}
+
+#back-card img {
+    display: flex;
+    margin-left: 260px;
+    margin-top: 230px;
+}
+
+#front-card 
+.circle-1 {
+    position: absolute;
+    left: 180px;
+    top: 20px;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #fff;
+    background-color: #fff;
+    border-radius: 50%;
+}
+
+#front-card 
+.circle-2 {
+    position: absolute;
+    left: 230px;
+    top: 30px;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+}
+
+#number-card {
+    position: absolute;
+    left: 190px;
+    top: 110px;
+    font-size: 30px;
+    color: #fff;
+}
+
+#name-card {
+    position: absolute;
+    left: 190px;
+    top: 160px;
+    font-size: 16px;
+    color: #fff;
+}
+
+#mm-card {
+    position: absolute;
+    left: 430px;
+    top: 160px;
+    font-size: 16px;
+    color: #fff;
+}
+
+#bar-card {
+    position: absolute;
+    left: 452px;
+    top: 160px;
+    font-size: 16px;
+    color: #fff;
+}
+
+#yy-card {
+    position: absolute;
+    left: 460px;
+    top: 160px;
+    font-size: 16px;
+    color: #fff;
+}
+
+#cvc-card {
+    position: absolute;
+    left: 540px;
+    top: 90px;
+    font-size: 16px;
+    color: #fff;
+}
+
+/* CONTENT RIGHT */
+
+#content-complete-status {
+    display: none;
+    text-align: center;
+    margin-left: 320px;
+}
+
+#content-complete-status h1, 
+#content-complete-status p,
+#content-complete-status button {
+    margin-top: 20px;
+}
+
+#content-complete-status button {
+    width: 300px;
+    height: 40px;
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    background-color: #21092f;
+    cursor: pointer;
+}
+
+#content-complete-status button:hover {
+    background-color: #2c0b40;
+}
+
+.content-right 
+form { 
+    width: 400px;
+    height: auto;
+    margin-left: 300px;
+    display: flex;
+    flex-direction: column;
+}
+
+.content-right 
+form label { 
+    display: flex;
+    flex-direction: column;
+    font-size: 11px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.content-right 
+form input { 
+    width: 300px;
+    height: 35px;
+    padding: 0 10px;
+    font-size: 17px;
+    border: 1px solid #b9b9b9;
+    border-radius: 5px;
+    margin-top: 5px;
+    outline: none;
+}
+
+.content-right 
+form input::placeholder { 
+    color: #b9b9b9;
+}
+
+#input-error {
+    outline-color: #ff5252;
+}
+
+#message-error-name-card, 
+#message-error-number-card, 
+#message-error-date-card, 
+#message-error-cvc-card {
+    display: flex;
+    font-weight: bold;
+    font-size: 09px;    
+    color: #ff5252;
+    margin-top: 2px;
+    text-transform: none;
+}
+
+.content-date-cvc-card {
+    width: 300px; 
+    display: flex;
+}
+
+.input-date-card label { 
+    display: flex;
+}
+
+.input-date-card p { 
+    width: 110px;
+    font-size: 11px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+#input-mm-card, #input-yy-card {
+    width: 50px;
+}
+
+.input-cvc-card { 
+    margin-left: 28px;
+}
+
+#cvc-card-input {
+    width: 162px;
+}
+
+.content-right 
+form button { 
+    width: 300px;
+    height: 40px;
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    background-color: #21092f;
+    cursor: pointer;
+}
+
+.content-right 
+form button:hover { 
+    background-color: #2c0b40;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -20px;
+    color: #111;
+    font-size: 15px; 
+}
+
+footer a {
+    margin-left: 5px;
+}
+
+@media screen and (max-width: 375px) {
+    .content-card {
+        width: 375px;
+        display: flex;
+        flex-direction: column;
+    }
+    .content-left { 
+        width: 100vw;
+        background-image: url(images/bg-main-mobile.png);
+    }
+    #front-card img {
+        top: -120px;
+        left: -140px;
+        width: 280px;
+        height: 160px;
+        position: absolute;
+        z-index: 2;
+    }
+    .circles {
+        position: absolute;
+        top: -125px;
+        left: -140px;
+        z-index: 2;
+    }
+    #front-card 
+    .circle-1 {
+        width: 35px;
+        height: 33px;
+        z-index: 2;
+    }
+    #front-card 
+    .circle-2 {
+        width: 15px;
+        height: 15px;
+        z-index: 2;
+    }
+    .content-number-card {
+        position: absolute;
+        top: -135px;
+        left: -150px;
+        z-index: 2;
+    }
+    #number-card {
+        width: 100vw;
+        font-size: 24px;
+        z-index: 2;
+    }
+    .content-name-date-card {
+        position: absolute;
+        width: 100vw;
+        top: -150px;
+        left: -150px;
+        z-index: 2;
+    }
+    #name-card {
+        font-size: 12px;
+        z-index: 2;
+    }
+    #mm-card, #bar-card, #yy-card {
+        font-size: 12px;
+        margin-left: -40px;
+        z-index: 2;
+    }
+    #mm-card {
+        margin-left: -35px;
+    }
+    #yy-card {
+        margin-left: -40px;
+    }
+    #back-card img {
+        position: absolute;
+        top: -440px;
+        left: -190px;
+        width: 280px;
+        height: 160px;
+        z-index: 1;
+    }
+    #cvc-card {
+        position: absolute;
+        top: -140px;
+        margin-left: -245px;
+        font-size: 14px;
+        z-index: 1;
+    }
+    .content-right form { 
+        display: flex;
+        margin: auto;
+        padding: 20px;
+        margin-top: -170px;
+        width: 350px;
+    }
+    #content-complete-status {
+        display: none;
+        margin: auto;
+        margin-top: -120px;
+    }
+
+    footer {
+        width: 350px;
+        font-size: 13px;
+        margin: auto;
+        margin-top: 50px;
+    }
+}

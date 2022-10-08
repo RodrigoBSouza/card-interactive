@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | Interactive card details form</title>
+</head>
+<body>
+  <div class="content-card">
+    <div class="content-left">
+      <div class="content-cards">
+        <div id="front-card">
+          <img src="images/bg-card-front.png" alt="img-front-card">
+
+          <div class="circles">
+            <div class="circle-1"></div>
+            <div class="circle-2"></div>
+          </div>
+
+          <div class="content-number-card">
+            <span id="number-card">0000 0000 0000 0000</span>
+          </div>
+
+          <div class="content-name-date-card">
+            <span id="name-card">Name Surname</span>
+            <span id="mm-card">00</span>
+            <span id="bar-card">/</span>
+            <span id="yy-card">00</span>
+          </div>
+        </div>
+  
+        <div id="back-card">
+          <img src="images/bg-card-back.png" alt="img-back-card">
+
+          <div class="content-cvc-card">
+            <span id="cvc-card">000</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="content-right">
+      <form class="content-info-card">
+        <label for="input-name-card">Cardholder Name
+          <input class="input" type="text" id="input-name-card" placeholder="e.g. Jane Apleseed" maxlength="22">
+          <p id="message-error-name-card"></p>
+        </label>
+
+        <label for="input-number-card">Card Number
+          <input name="input-number-card" class="input" type="text" id="input-number-card" placeholder="e.g. 1234 5678 9123 0000" maxlength="19">
+          <p id="message-error-number-card"></p>
+        </label>
+
+        <div class="content-date-cvc-card">
+          <div class="input-date-card">
+              <p>Exp. Date (MM/YY)</p>
+              <input class="input input-date" type="text" id="input-mm-card" placeholder="MM" maxlength="2">
+              <input class="input input-date" type="text" id="input-yy-card" placeholder="YY" maxlength="2">
+              <p id="message-error-date-card"></p>
+          </div>
+
+          <div class="input-cvc-card">
+            <label for="cvc-card-input">CVC
+              <input class="input" type="text" id="cvc-card-input" placeholder="e.g. 123" maxlength="3">
+              <p id="message-error-cvc-card"></p>
+            </label>
+          </div>
+        </div>
+
+        <button onclick="btnConfirm()" id="btn-confirm" type="submit">Confirm</button>
+      </form>
+    </div>
+
+    <form id="content-complete-status">
+      <svg width="80" height="80" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="40" cy="40" r="40" fill="url(#a)"/><path d="M28 39.92 36.08 48l16-16" stroke="#fff" stroke-width="3"/><defs><linearGradient id="a" x1="-23.014" y1="11.507" x2="0" y2="91.507" gradientUnits="userSpaceOnUse"><stop stop-color="#6348FE"/><stop offset="1" stop-color="#610595"/></linearGradient></defs></svg>
+      <h1>THANK YOU!</h1>
+      <p>We've added your card details!</p>
+
+      <button id="btn-continue" type="submit">Continue</button>
+    </form>
+  </div>
+
+  <footer>
+    Challenge by <a href="https://www.frontendmentor.io/challenges/interactive-card-details-form-XpS8cKZDWw" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://www.frontendmentor.io/profile/RodrigoBSouza" target="_blank">Rodrigo Souza</a>.
+  </footer>
+  
+  <script src="main.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script>
+</body>
+</html>
